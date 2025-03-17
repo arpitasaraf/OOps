@@ -56,3 +56,5 @@ print('name',kevin.name)
 print('age',kevin.age)
 print('height',kevin.height)
 
+print('-------------------------------------------')
+
