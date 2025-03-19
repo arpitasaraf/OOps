@@ -1,40 +1,25 @@
-# class Collage:
-#     collageName = 'MU Collage'
+import math
 
-# class Student(Collage):
-#     studentName = None
+class Shape:
+    definition = 'Area bounded by curve'
+    area = 'Give a shape'
 
-# a1 = Student()
-# print(a1.studentName)
-# print(a1.collageName)
-
-class Car:
-
-    model = None
-    brand = None
-
-    def __init__(self,model,brand):
-        self.model = model
-        self.brand = brand
-
-    def details(self):
-        return f'model = {self.model} , brand = {self.brand}'
-
-
-class ElectricCar(Car):
-    def __init__(self,model,brand,batterySize):
-        super().__init__(model,brand)
-        self.batterySize = batterySize
+class Circle(Shape):
+    def __init__(self,radius):
+        self.area  = math.pi * (radius ** 2)
+        self.definition = 'Circle definition'
     
-    def electricDetails(self):
-        return f'model = {self.model} , brand = {self.brand} , batterySize = {self.batterySize}'
-    
-ecar1 = ElectricCar("MG" , 'Honda','300kwh')
-print(ecar1.__dict__)
-print(ecar1.model)
-print(ecar1.brand)
-print(ecar1.batterySize)
-print(ecar1.details())
-print(ecar1.electricDetails())
+class Square(Shape):
+    def __init__(self,sideLength):
+        self.area = sideLength ** 2
+        self.definition = " it's all side are equals "
 
+circle = Circle(5)
+print(circle.__dict__)
+print(circle.definition)
 
+print("------------------------------------")
+
+square = Square(5)
+print(square.__dict__)
+print(square.definition)
