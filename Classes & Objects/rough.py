@@ -1,25 +1,18 @@
-import math
+# class Shape:
+#     definition = 'Area bounded by curves' # class attribute
 
-class Shape:
-    definition = 'Area bounded by curve'
-    area = 'Give a shape'
 
-class Circle(Shape):
-    def __init__(self,radius):
-        self.area  = math.pi * (radius ** 2)
-        self.definition = 'Circle definition'
-    
-class Square(Shape):
-    def __init__(self,sideLength):
-        self.area = sideLength ** 2
-        self.definition = " it's all side are equals "
+# s = Shape()
+# print(s.definition) 
 
-circle = Circle(5)
-print(circle.__dict__)
-print(circle.definition)
+# d = Shape.definition
+# print(d)
 
-print("------------------------------------")
+class SST:
+    define = 'it has 3 subject ' 
 
-square = Square(5)
-print(square.__dict__)
-print(square.definition)
+s = SST()
+print(s.define)
+
+a = SST.define
+print(a)
